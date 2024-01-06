@@ -1,23 +1,31 @@
 import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { fetchUsers } from '../store'
+import { useSelector } from "react-redux"
+import { fetchUsers, addUser } from '../store'
+import Button from './Button'
 import Skeleton from "./Skeleton"
+import { useThunk } from "../hooks/useThunk"
 
 const UsersList = () => {
-  const dispatch = useDispatch()
-  const { isLoading, data, error } = useSelector((state) => (
+  const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers)
+  const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser)
+
+  const { data } = useSelector((state) => (
     state.users
   ))
 
   useEffect(()=>{
-    dispatch(fetchUsers())
+    doFetchUsers()
   },[])
 
-  if (isLoading) {
+  const handleUserAdd = () => {
+    doCreateUser()
+  }
+
+  if (isLoadingUsers) {
     return <Skeleton times={5} className="h-10 w-full"/>
   }
 
-  if (error) {
+  if (loadingUsersError) {
     return <div>Error fetching data...</div>
   }
 
@@ -30,7 +38,14 @@ const UsersList = () => {
   ))
 
   return (
-    <div>{renderedUsers}</div>
+    <div>
+      <div className="flex flex-row justify-between m-3">
+        <h1 className="m-2 text-xl">Users</h1>
+        <Button loading={isCreatingUser} onClick={handleUserAdd}>+ Add User</Button>
+        {creatingUserError && 'Error creating user...'}
+      </div>
+      {renderedUsers}
+    </div>
   )
 }
 

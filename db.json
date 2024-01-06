@@ -1,7 +1,58 @@
 {
-    "users": [
-        { "id": 1, "name": "Anna" }
-    ],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Anna"
+    },
+    {
+      "name": "Darin Schimmel",
+      "id": 2
+    },
+    {
+      "name": "Louis Greenholt",
+      "id": 3
+    },
+    {
+      "name": "Eileen Stroman",
+      "id": 4
+    },
+    {
+      "name": "Dave Kilback",
+      "id": 5
+    },
+    {
+      "name": "Colin Grimes",
+      "id": 6
+    },
+    {
+      "name": "Miss Chelsea Lind",
+      "id": 7
+    },
+    {
+      "name": "Joey Harvey V",
+      "id": 8
+    },
+    {
+      "name": "Naomi Pagac",
+      "id": 9
+    },
+    {
+      "name": "Nick Wilkinson",
+      "id": 10
+    },
+    {
+      "name": "Chelsea Oberbrunner",
+      "id": 11
+    },
+    {
+      "name": "Moses Pfannerstill",
+      "id": 12
+    },
+    {
+      "name": "Violet Schumm PhD",
+      "id": 13
+    }
+  ],
+  "albums": [],
+  "photos": []
 }
