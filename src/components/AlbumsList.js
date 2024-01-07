@@ -4,7 +4,7 @@ import Button from './Button'
 import AlbumsListItem from './AlbumsListItem'
 
 const AlbumsList = ({user}) => {
-    const { data, error, isLoading } = useFetchAlbumsQuery(user)
+    const { data, error, isFetching } = useFetchAlbumsQuery(user)
     const [addAlbum, result] = useAddAlbumMutation()
 
     const handleAddAlbum = () => {
@@ -20,7 +20,7 @@ const AlbumsList = ({user}) => {
             </Button>
         </div>
         <div>
-            {isLoading
+            {isFetching
                 ? <Skeleton className="h-10 w-full" times={3}/>
                 : error
                     ? <div>Error loading albums.</div>
