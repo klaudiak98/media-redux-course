@@ -17,6 +17,12 @@
       "id": 10
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 15,
+      "title": "Hiking Trip",
+      "userId": 2
+    }
+  ],
   "photos": []
 }
