@@ -1,28 +1,36 @@
 {
   "users": [
     {
-      "name": "Darin Schimmel",
+      "name": "Jill Kilback",
+      "id": 1
+    },
+    {
+      "name": "Jessie Durgan PhD",
       "id": 2
-    },
-    {
-      "name": "Dave Kilback",
-      "id": 5
-    },
-    {
-      "name": "Naomi Pagac",
-      "id": 9
-    },
-    {
-      "name": "Beth Kozey",
-      "id": 10
     }
   ],
   "albums": [
     {
-      "id": 15,
-      "title": "Hiking Trip",
-      "userId": 2
+      "userId": 1,
+      "title": "Small Fresh Pizza",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "Practical Cotton Chips",
+      "id": 2
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/abstract?lock=6589881675415552",
+      "id": 1
+    },
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/abstract?lock=3915898886815744",
+      "id": 2
+    }
+  ]
 }
